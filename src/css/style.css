@@ -1,0 +1,21 @@
+footer {
+    clear: both;
+    position: relative !important;
+    height: 50px !important;
+    margin-top: -50px !important;
+}
+
+.alto-buscar{
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.errorAHH{
+    font-size: 12px !important;
+    color: orange !important;
+}
+
+.navbar{
+    background-color: #FF8F5E !important;
+}
