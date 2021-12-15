@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-const ItemListContainer = (props) => {
+const ItemCount = (props) => {
 
     const [counter, setCounter] = useState(0);
     const [stock, setStock] = useState(5);
@@ -46,4 +46,4 @@ const ItemListContainer = (props) => {
 	);
 };
 
-export default ItemListContainer;
+export default ItemCount;
