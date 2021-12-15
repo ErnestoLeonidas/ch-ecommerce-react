@@ -4,13 +4,20 @@ import React, { useState } from 'react';
 const ItemListContainer = (props) => {
 
     const [counter, setCounter] = useState(0);
+    const [stock, setStock] = useState(5);
 
     const add = () => {
-        setCounter(counter + 1);
+        if ( stock > 0 ){
+            setCounter(counter + 1);
+            setStock(stock -1);
+        }
     }
 
     const del = () => {
-        setCounter(counter - 1);
+        if ( counter > 0 ){
+            setCounter(counter - 1);
+            setStock(stock + 1);
+        }
     }
 
 	return (
@@ -22,6 +29,7 @@ const ItemListContainer = (props) => {
                     </a>
                 </div>
                 <div className="card-body">
+                <h4 className="card-title"> Stock {stock} </h4>
                 </div>
                 <div className="card-footer text-center">
                     
