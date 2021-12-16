@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-
 const ItemCount = (props) => {
 
     const [counter, setCounter] = useState(0);
-    const [stock, setStock] = useState(5);
+    const [stock, setStock] = useState(props.stock_value);
+
 
     const add = () => {
         if ( stock > 0 ){
@@ -22,26 +22,21 @@ const ItemCount = (props) => {
 
 	return (
         <>
-
-            <div className="card card-profile card-plain">
-                <div className="card-avatar border-white">
-                    <a href="#avatar">
-                    </a>
+            <div className="row p-0 m-0">
+                <div className="col-12 text-center">
+                    <h4 className="card-title"> Stock {stock} </h4>
                 </div>
-                <div className="card-body">
-                <h4 className="card-title"> Stock {stock} </h4>
-                </div>
-                <div className="card-footer text-center">
-                    
-                    <h4 className="card-title"> {counter} </h4>
-                      <div className="btn-group">
-                        <button className="btn btn-sm btn-border btn-round" onClick={ del }> - </button>
-                        <button className="btn btn-sm btn-border btn-round" onClick={ add }> + </button>
-                      </div>
-                    
+                <div className="col-12 mt-2">
+                    <div className="row justify-content-center">
+                        <h4 className="card-title mr-2"> {counter} </h4>
+                        <div className="btn-group">
+                            <button className="btn btn-sm btn-border btn-round btn-info" onClick={ del }> - </button>
+                            <button className="btn btn-sm btn-border btn-round btn-info" onClick={ add }> + </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+        
         </>
 	);
 };
