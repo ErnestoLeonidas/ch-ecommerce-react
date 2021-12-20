@@ -8,7 +8,7 @@ const Item = (props) => {
             <div className="card card-product card-plain">
               <div className="card-image">
                 <a href={'holi'} >
-                  <img src={require(`../img/${props.image}.jpg`).default} alt="Rounded Image" className="img-rounded img-responsive" />
+                  <img src={require(`../img/${props.pictureUrl}.jpg`).default} alt="Rounded Image" className="img-rounded img-responsive" />
                 </a>
                 <div className="card-body">
                   <div className="card-description">

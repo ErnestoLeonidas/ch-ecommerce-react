@@ -6,14 +6,14 @@ const ItemCount = (props) => {
     const [stock, setStock] = useState(props.stock_value);
 
 
-    const add = () => {
+    const onAdd = () => {
         if ( stock > 0 ){
             setCounter(counter + 1);
             setStock(stock -1);
         }
     }
 
-    const del = () => {
+    const onDelete = () => {
         if ( counter > 0 ){
             setCounter(counter - 1);
             setStock(stock + 1);
@@ -30,8 +30,8 @@ const ItemCount = (props) => {
                     <div className="row justify-content-center">
                         <h4 className="card-title mr-2"> {counter} </h4>
                         <div className="btn-group">
-                            <button className="btn btn-sm btn-border btn-round btn-info" onClick={ del }> - </button>
-                            <button className="btn btn-sm btn-border btn-round btn-info" onClick={ add }> + </button>
+                            <button className="btn btn-sm btn-border btn-round btn-info" onClick={ onDelete }> - </button>
+                            <button className="btn btn-sm btn-border btn-round btn-info" onClick={ onAdd }> + </button>
                         </div>
                     </div>
                 </div>

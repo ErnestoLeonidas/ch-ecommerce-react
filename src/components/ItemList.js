@@ -4,38 +4,28 @@ import Item from './Item';
 
 const ItemList = (props) => {
 
+    const items = props.products
+
 	return (
         <>
-            <div class="col-md-4">
-                <Item 
-                    image='balmain_5'
-                    tite='Green Velvet Dress'
-                    description='This is a limited edition dress for the fall collection. Comes in 3 colours.'
-                    sale='35.000'
-                    discount='29.000'
-                    stock='10'
-                />
-            </div>
-            <div class="col-md-4">
-                <Item 
-                    image='balmain_3'
-                    tite='Crepe and Organza Dress'
-                    description='This is a limited edition dress for the fall collection. Comes in 3 colours.'
-                    sale='32.000'
-                    discount='28.000'
-                    stock='7'
-                />
-            </div>
-            <div class="col-md-4">
-                <Item 
-                    image='balmain_4'
-                    tite='Lace Mini Dress'
-                    description='This is a limited edition dress for the fall collection. Comes in 3 colours.'
-                    sale='55.000'
-                    discount='35.000'
-                    stock='4'
-                />
-            </div>
+            {!!items &&
+                items.length > 0 &&
+                items.map((item, index) => {
+                    //console.log(film.properties.director);
+                    return (
+                        <div key={index} class="col-md-4">
+                            <Item 
+                                pictureUrl={item.pictureUrl}
+                                tite={item.title}
+                                description={item.description}
+                                sale={item.sale}
+                                discount={item.discount}
+                                stock={item.stock}
+                            />
+                        </div>
+                    );
+                })
+            }
         </>
 	);
 };
