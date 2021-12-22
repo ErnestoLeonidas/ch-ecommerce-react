@@ -6,12 +6,14 @@ const ItemList = (props) => {
 
     const items = props.products
 
+    console.log(items)
+
 	return (
         <>
             {!!items &&
                 items.length > 0 &&
                 items.map((item, index) => {
-                    //console.log(film.properties.director);
+
                     return (
                         <div key={index} class="col-md-4">
                             <Item 

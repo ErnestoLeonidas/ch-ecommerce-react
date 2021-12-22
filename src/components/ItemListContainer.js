@@ -33,7 +33,7 @@ let products = [
 ]
 
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     let [list, setList] = useState([])
 
@@ -54,10 +54,10 @@ const ItemListContainer = (props) => {
 
 	return (
         <>
-            <div class="section latest-offers">
-                <div class="container">
-                    <h3 class="section-title">Latest Offers</h3>
-                    <div class="row">
+            <div className="section latest-offers">
+                <div className="container">
+                    <h3 className="section-title">Latest Offers</h3>
+                    <div className="row">
                         <ItemList products={list}/>
                     </div>
                 </div>

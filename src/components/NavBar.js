@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import CardWidget from './CardWidget';
 
+
 const NavBar = () => {
 	return (
 		<nav className="navbar navbar-dark bg-dark text-white" id="navbar">
@@ -14,7 +15,7 @@ const NavBar = () => {
 				<Link to="/">
 					<span className="navbar-brand mb-0 fs-4">Unique</span>
 				</Link>
-				<Link to="/">
+				<Link to="/ItemListContainer">
 					<span className="navbar-brand mb-0 fs-4">In Offers</span>
 				</Link>
 				<Link to="/">				
@@ -22,7 +23,8 @@ const NavBar = () => {
 				</Link>
 				<Link to="/">
 					<CardWidget />
-				</Link>      
+				</Link>    
+				  
 				</div> 
 			</div>
 		</nav>
