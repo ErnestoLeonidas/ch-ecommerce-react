@@ -17,6 +17,7 @@ const ItemList = (props) => {
                     return (
                         <div key={index} class="col-md-4">
                             <Item 
+                                id={item.id}
                                 pictureUrl={item.pictureUrl}
                                 tite={item.title}
                                 description={item.description}

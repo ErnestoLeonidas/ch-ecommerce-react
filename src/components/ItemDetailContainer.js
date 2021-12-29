@@ -5,6 +5,7 @@ import ItemDetail from "./ItemDetail"
 
 let initProduct = [
     {
+    id:1,
     pictureUrl:'balmain_5',
     tite:'Green Velvet Dress',
     description:'This is a limited edition dress for the fall collection. Comes in 3 colours.',

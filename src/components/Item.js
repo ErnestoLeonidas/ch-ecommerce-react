@@ -8,9 +8,9 @@ const Item = (props) => {
         <>
             <div className="card card-product card-plain">
               <div className="card-image">
-                <Link to="/ItemDetail">
+                <Link to={{pathname: `/item/${props.id}`}}>
                     <img src={require(`../img/${props.pictureUrl}.jpg`).default} alt="Rounded Image" className="img-rounded img-responsive" />
-				</Link>
+				        </Link>
                 <div className="card-body">
                   <div className="card-description">
                     <h5 className="card-title">{props.title}</h5>

@@ -7,6 +7,7 @@ import ItemList from './ItemList';
 
 let products = [
     {
+    id:1,
     pictureUrl:'balmain_5',
     tite:'Green Velvet Dress',
     description:'This is a limited edition dress for the fall collection. Comes in 3 colours.',
@@ -15,6 +16,7 @@ let products = [
     stock:'10'
     },
     {
+    id:2,
     pictureUrl:'balmain_3',
     tite:'Crepe and Organza Dress',
     description:'This is a limited edition dress for the fall collection. Comes in 3 colours.',
@@ -23,6 +25,7 @@ let products = [
     stock:'7'
     },
     {
+    id:3,
     pictureUrl:'balmain_4',
     tite:'Lace Mini Dress',
     description:'This is a limited edition dress for the fall collection. Comes in 3 colours.',
@@ -40,7 +43,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         setTimeout(()=>{
             setList(products)
-        },2000)
+        },500)
         /*
         const i = setInterval(() => {
             console.log("interval")
